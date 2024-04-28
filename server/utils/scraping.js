@@ -22,15 +22,15 @@ const parseSearchHTML = (html) => {
   $('[data-component-type="s-search-result"]').each((i, el) => {
     const title = $(el).find("h2").text().trim();
     const rating = $(el).find(".a-icon-star-small").text();
-    const reviewsAmount = $(el)
+    const reviewAmount = $(el)
       .find('[data-component-type="s-client-side-analytics"]')
       .text()
       .trim();
     const imageURL = $(el).find(".s-image").attr("src");
 
     // Only add to products when has all properties
-    if (title && rating && reviewsAmount && imageURL) {
-      products.push({ title, rating, reviewsAmount, imageURL });
+    if (title && rating && reviewAmount && imageURL) {
+      products.push({ title, rating, reviewAmount, imageURL });
     }
   });
 
