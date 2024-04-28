@@ -10,6 +10,12 @@
 
 h1 {
   text-align: center;
+  font-weight: 800;
+}
+
+#info {
+  width: fit-content;
+  margin-inline: auto;
 }
 
 #error.enabled {
@@ -44,13 +50,20 @@ form {
 }
 
 input {
+  border: 1px solid rgb(43, 43, 43);
+  border-radius: 5px;
   font-size: 1rem;
   padding: 5px;
 }
 
+input:disabled {
+  border: 1px solid rgb(206, 206, 206);
+}
+
 button {
   background-color: transparent;
-  border: 1px solid black;
+  border-radius: 5px;
+  border: 1px solid rgb(43, 43, 43);
   transition-property: background-color color;
   transition-duration: 250ms;
   font-size: 1rem;
